@@ -9,7 +9,15 @@ class Chef implements Runnable {
         this.data = datas;
     }
 
-
+    void print_data(Integer datas) {
+        this.data = datas;
+        if(this.data<3) {
+            System.out.println("Chef Kendall will prepare your dish");
+        }
+        else if(this.data>=3) {
+            System.out.println("Chef Kendall and Chef Jenna will prepare your dish");
+        }
+    }
 
     @Override
     public void run() {
@@ -21,4 +29,3 @@ class Chef implements Runnable {
         }
     }
 }
-
