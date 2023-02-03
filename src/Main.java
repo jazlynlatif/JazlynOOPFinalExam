@@ -2,14 +2,15 @@ import java.io.IOException;
 import java.util.*;
 
 public class Main {
+    public static Integer Totalpriceses;
     static DrinkRobot drinkrobot = new DrinkRobot(null);
     static FrenchFriesRobot frenchfriesrobot = new FrenchFriesRobot(null);
     static FriedChickenRobot friedchickenrobot = new FriedChickenRobot();
     static HamburgerRobot hamburgerrobot = new HamburgerRobot();
     static HotdogRobot hotdogrobot = new HotdogRobot();
+    static Chef chefs = new Chef(Totalpriceses);
+    static Time times = new Time(Totalpriceses);
     static ArrayList<Order> orders = new ArrayList<Order>();
-    
-    public static Integer Totalpriceses;
 
     public static void promptEnterKey(){
         System.out.println("Press \"ENTER\" ");
@@ -88,7 +89,7 @@ public class Main {
         Thread threadTwo = new Thread(TaskB);
     
         threadOne.start(); 
-        threadTwo.start();
+        threadTwo.start();       
 
         promptEnterKey();
 
